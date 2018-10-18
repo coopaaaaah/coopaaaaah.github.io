@@ -15,10 +15,10 @@ defaults:
     - scope:
         path: ""
         type: connecttech2018
-     values:
-         layout: "default"
-         title: Connect TEch 2018
-         permalink: /:collection/:title
+      values:
+        layout: "default"
+        title: Connect TEch 2018
+        permalink: /:collection/:title
 
 collections:
     connecttech2018:
