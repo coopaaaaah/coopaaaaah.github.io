@@ -11,6 +11,14 @@ description: Software Engineer from The Home Depot
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
+defaults:
+    - scope:
+        path: ""
+        type: connecttech2018
+     values:
+         layout: "default"
+         title: Connect TEch 2018
+         permalink: /:collection/:title
 
 collections:
     connecttech2018:
