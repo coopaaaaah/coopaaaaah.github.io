@@ -7,17 +7,26 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
+
+const line_geo = new THREE.BoxGeometry( 1.7, 1.7, .2 );
+const line_material = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+const line = new THREE.Mesh( line_geo, line_material );
+scene.add( line );
+
 
 camera.position.z = 5;
 
 function animate() {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
-    
+
+    line.rotation.x += 0.01;
+    line.rotation.y += 0.01;
+
 	renderer.render( scene, camera );
 }
 
